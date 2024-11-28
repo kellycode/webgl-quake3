@@ -144,6 +144,7 @@ if (!IN_WORKER) {
         // Find the pending texture associated with the data we just received
         // from the worker.
         let pendingTexture = this.pendingTextures[msg.data.id];
+        
         if (!pendingTexture) {
           if (msg.data.error) {
             console.error(`Basis transcode failed: ${msg.data.error}`);
@@ -154,6 +155,8 @@ if (!IN_WORKER) {
 
         // Remove the pending texture from the waiting list.
         delete this.pendingTextures[msg.data.id];
+
+        console.log(msg)
 
         // If the worker indicated an error has occured handle it now.
         if (msg.data.error) {

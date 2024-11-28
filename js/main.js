@@ -728,14 +728,16 @@ function main() {
 // Fire this once the page is loaded up
 window.addEventListener("load", function() {
   function OnVRSupported() {
-    var vrToggle = document.getElementById("vrToggle");
-    vrToggle.style.display = "block";
+    // error
+    // var vrToggle = document.getElementById("vrToggle");
+    // vrToggle.style.display = "block";
     var mobileVrBtn = document.getElementById("mobileVrBtn");
     mobileVrBtn.style.display = "block";
   }
 
   if (navigator.xr) {
-    navigator.xr.supportsSession('immersive-vr').then(OnVRSupported);
+    // error
+    // navigator.xr.supportsSession('immersive-vr').then(OnVRSupported);
   }
 
   main();
